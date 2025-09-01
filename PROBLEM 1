@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    double lambda, angleDeg, d, angleRad, order;
+
+    printf("Enter wavelength (nm): ");
+    scanf("%lf", &lambda);
+
+    if (lambda < 380 || lambda > 750) {
+        printf("Out of the range. Please enter a valid number. \n");
+        return 0;
+    }
+
+    printf("Enter angle (in degrees): ");
+    scanf("%lf", &angleDeg);
+
+    printf("Enter slit distance d (in micrometers): ");
+    scanf("%lf", &d);
+
+    angleRad = angleDeg * M_PI / 180.0;
+    d *= 1e-6;
+    lambda *= 1e-9;
+    order = (d * sin(angleRad)) / lambda;
+    printf("%.0lf-th order maxima\n", round(order));
+    return 0;
+}
