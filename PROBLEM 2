@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include <math.h>
 
-int main() {
+int main() 
+{
 
     double angle_deg=45;
     double angle_rad= angle_deg * (M_PI / 180);
     double ratio;
     ratio = 1 / sin(angle_rad);
 
-    printf("Slit-to-wavelength ratio for first diffraction minimum at 45 degrees is : %.4lf\n", ratio);
+    printf("The Ratio of slit width to the wavelength for the first minimum at 45 degrees is %.4lf\n",ratio);
 
     return 0;
 
