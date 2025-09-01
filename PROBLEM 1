@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
-int main() {
+int main() 
+{
     double lambda, angleDeg, d, angleRad, order;
 
     printf("Enter wavelength (nm): ");
